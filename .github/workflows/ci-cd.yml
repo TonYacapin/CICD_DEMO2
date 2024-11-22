@@ -27,6 +27,6 @@ jobs:
       - name: Deploy to GitHub Pages (main branch)
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: main            # Deploy to the main branch instead of gh-pages
-          folder: dist            # Folder containing your build (output folder)
-          token: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub's token
+          branch: main            
+          folder: dist           
+          token: ${{ secrets.GITHUB_TOKEN }} 
