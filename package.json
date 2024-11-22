@@ -5,9 +5,9 @@
     "main": "src/index.js",
     "scripts": {
       "test": "echo \"No tests yet\" && exit 0",
-      "build": "npm run clean && mkdir -p dist && cp -r * dist/ && echo 'Build successful!'",
+      "build": "npm run clean && mkdir dist && xcopy /e /i * dist\\ && echo 'Build successful!'",
       "deploy": "gh-pages -d dist",
-      "clean": "rm -rf dist",
+      "clean": "if exist dist rmdir /s /q dist",
       "start": "echo 'Start command placeholder'"
     },
     "author": "Ton Yacapin",
