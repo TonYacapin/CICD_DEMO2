@@ -22,7 +22,11 @@ jobs:
         run: npm install
 
       - name: Run build
-        run: npm run builllllllllll
+        run: npm run build
 
-      - name: Deploy
-        run: echo "Deployed successfully!"
+      - name: Deploy to GitHub Pages (main branch)
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main            # Deploy to the main branch instead of gh-pages
+          folder: dist            # Folder containing your build (output folder)
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub's token
